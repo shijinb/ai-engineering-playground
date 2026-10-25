@@ -1,0 +1,51 @@
+[project]
+name = "ai-engineering-playground"
+version = "1.0.0"
+description = "Provider-agnostic LLM integration patterns: OpenAI, Gemini and Claude behind one interface, typed structured output, retries, fallback, cost tracking and evaluation."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Shijin B Gopal" }]
+dependencies = [
+    "anthropic>=2.3,<3",
+    "openai>=3.37,<4",
+    "google-genai>=2.33,<3",
+    "pydantic>=2.10,<3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-asyncio>=1.0", "ruff>=0.6", "mypy>=1.10"]
+
+[project.scripts]
+aiplay = "aiplay.cli:main"
+
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["aiplay*"]
+
+[tool.setuptools.package-data]
+aiplay = ["prompts/*.prompt.md"]
+
+[tool.ruff]
+line-length = 140
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "ASYNC"]
+
+[tool.mypy]
+strict = true
+files = ["aiplay"]
+
+[[tool.mypy.overrides]]
+module = ["google.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+asyncio_default_test_loop_scope = "function"
+testpaths = ["tests"]

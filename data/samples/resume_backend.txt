@@ -1,0 +1,13 @@
+Arjun Mehta
+arjun.mehta@example.com | +91 98765 43210 | Pune, India
+
+EXPERIENCE
+Senior Software Engineer, Northwind Payments (Mar 2021 – present)
+- Built and operated payment reconciliation services in Python (FastAPI) and PostgreSQL.
+- Cut nightly batch runtime from 4 hours to 35 minutes by moving to incremental processing.
+
+Software Engineer, Contoso Retail (Jul 2017 – Feb 2021)
+- Developed order management APIs in PHP (Laravel) and MySQL; introduced Redis caching.
+
+SKILLS
+Python, FastAPI, PostgreSQL, PHP, Laravel, MySQL, Redis, Docker, AWS

@@ -1,0 +1,9 @@
+{
+  "note": "USD per 1M tokens, standard (non-batch, non-cached) rates. Add models you use from the provider's official pricing page; models not listed are reported with cost null.",
+  "checked": "2026-10-25",
+  "models": {
+    "claude-opus-5-5": {"input_per_million": 4.00, "output_per_million": 20.00, "source": "https://www.anthropic.com/pricing"},
+    "claude-sonnet-5-5": {"input_per_million": 2.00, "output_per_million": 10.00, "source": "https://www.anthropic.com/pricing"},
+    "claude-haiku-5-5": {"input_per_million": 0.10, "output_per_million": 0.50, "source": "https://www.anthropic.com/pricing"}
+  }
+}

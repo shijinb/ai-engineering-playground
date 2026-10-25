@@ -1,0 +1,1 @@
+Data Engineer (3+ years). Build Airflow pipelines that move data from Kafka into Snowflake, own data quality checks, and work with analysts on models in dbt. Hybrid, Hyderabad.
